@@ -1,1 +1,1 @@
-web: gunicorn repasitory_fhut.wsgi --log-file -
+web: gunicorn kkss.wsgi --log-file -
