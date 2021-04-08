@@ -8,6 +8,7 @@ from django.conf import settings
 
 urlpatterns = [
     path('', views.index, name='index'),
+    path('detail_berita', views.detail_berita, name='detail_berita'),
     
 ]
 
