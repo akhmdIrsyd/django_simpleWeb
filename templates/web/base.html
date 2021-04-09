@@ -17,6 +17,7 @@
     <!-- Load fonts style after rendering the layout styles -->
     <link rel="stylesheet" href="{% static 'web/assets/css/font.css' %}">
     <link rel="stylesheet" href="{% static 'web/assets/css/fontawesome.min.css' %}">
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
 <!--
     
 TemplateMo 559 Zay Shop
@@ -63,19 +64,19 @@ https://templatemo.com/tm-559-zay-shop
                 <div class="flex-fill">
                     <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">Beranda</a>
+                            <a class="nav-link" href="{% url 'index' %}">Beranda</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="about.html">Tentang</a>
+                            <a class="nav-link" href="{% url 'about' %}">Tentang</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="shop.html">Galeri</a>
+                            <a class="nav-link" href="{% url 'galery' %}">Galeri</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Berita</a>
+                            <a class="nav-link" href="{% url 'berita' %}">Berita</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Kontak</a>
+                            <a class="nav-link" href="{% url 'kontak' %}">Kontak</a>
                         </li>
                     </ul>
                 </div>

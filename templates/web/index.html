@@ -34,7 +34,7 @@
                                 <p>
                                    {{row.isi_berita|slice:":255"}}
                                 </p>
-								<p class="text-center"><a class="btn btn-success">Read More</a></p>
+								<p class="text-center"><a href="{% url 'detail_berita' pk=row.pk %}" class="btn btn-success">Read More</a></p>
                                 
                             </div>
                         </div>
@@ -79,7 +79,7 @@
     <section class="container py-5">
         <div class="row text-center pt-3">
             <div class="col-lg-6 m-auto">
-                <h1 class="h1">Galery</h1>
+                <h1 class="h1">Galeri</h1>
                 
             </div>
         </div>
@@ -110,16 +110,16 @@
                                         
                 <div class="col-12 col-md-4 mb-4">
                     <div class="card h-100">
-                        <a href="shop-single.html">
+                        <a href="{% url 'detail_berita' pk=row.pk %}">
                             <img src="{{row.foto_berita.url}}" class="card-img-top" alt="...">
                         </a>
                         <div class="card-body">
                             
-                            <a href="shop-single.html" class="h3 text-decoration-none text-dark">{{ row.judul_berita }}</a>
+                            <a href="{% url 'detail_berita' pk=row.pk %}" class="h3 text-decoration-none text-dark">{{ row.judul_berita }}</a>
 							
                             
                         </div>
-						<p class="text-center"><a class="btn btn-success">Read More</a></p>
+						<p class="text-center"><a href="{% url 'detail_berita' pk=row.pk %}"class="btn btn-success">Read More</a></p>
                     </div>
                 </div>
             {% endfor %}    

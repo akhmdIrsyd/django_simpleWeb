@@ -1,7 +1,17 @@
 from django.db import models
 from django.core.validators import FileExtensionValidator
-from django.contrib.auth.models import User
+
+from django.contrib.auth.models import AbstractUser
 # Register your models here.
+
+class User(AbstractUser):
+    USER_TYPE_CHOICES = (
+        (1, 'admin'),
+        (2, 'User'),
+    )
+
+    user_type = models.PositiveIntegerField(choices=USER_TYPE_CHOICES, default=1)
+
 def _upload_path(instance, filename):
     return instance.get_upload_path(filename)
 
@@ -41,4 +51,4 @@ class galery(models.Model):
     foto_galery = models.FileField(upload_to=_upload_path, blank=True, null=True, validators=[FileExtensionValidator(['jpg']), file_size])
     tanggal=models.DateTimeField( auto_now=True, auto_now_add=False)
     def get_upload_path(self, filename):
-        return "uploads/"+str(galery)+"/"+filename
+        return "uploads/galery/"+filename
