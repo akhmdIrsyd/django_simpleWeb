@@ -49,7 +49,7 @@ def Galery(request):
     context = {
         'rows1':data_galeri,
     }
-    return render(request, 'web/galery.html',context)
+    return render(request, 'web/Galery.html',context)
 
 def Agenda(request):
     #Data_berita = berita.objects.order_by("-id")
